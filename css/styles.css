@@ -498,7 +498,7 @@ p {
   margin-bottom: 20px;
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -548,9 +548,19 @@ p {
   width: 100%;
   height: 100%;
 
-  color: #ffffff;
   background-color: #2f303a;
   border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
 }
 
 .mailing-button {
@@ -720,14 +730,16 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 30px;
+  padding: 40px;
 }
 
-.btn-open {
+.btn-close {
   width: 30px;
   height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-color: unset;
+  background: #ffffff;
+  box-sizing: border-box;
   position: absolute;
   right: 8px;
   top: 8px;
@@ -736,10 +748,96 @@ h3 {
 .icon-close {
   position: absolute;
   transform: translate(-50%, -50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.icon-close:hover {
+  fill: var(--accent-color);
+}
+
+.modal-title {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.modal-form-field {
+  margin-bottom: 10px;
+}
+
+.modal-form-label {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.input-wrap {
+  display: block;
+  position: relative;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+}
+
+.modal-form-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 15px;
+  top: 14px;
+  fill: #212121;
+}
+
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px 12px 16px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  resize: none;
+}
+
+.modal-comment::placeholder {
+  font-size: 14px;
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+}
+
+.check-label::before {
 }
