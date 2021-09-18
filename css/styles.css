@@ -784,8 +784,8 @@ h3 {
   color: #212121;
   margin-bottom: 12px;
 }
-.input-wrap:focus .modalform-input,
-.modal-form-icon {
+
+.modal-form-input:focus + .modal-form-icon {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -817,6 +817,10 @@ h3 {
   box-sizing: border-box;
   border-radius: 4px;
   padding-left: 42px;
+}
+
+.modal-form-input:focus {
+  border-color: var(--accent-color);
 }
 
 .modal-form-icon {
